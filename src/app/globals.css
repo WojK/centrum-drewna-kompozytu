@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @import "tailwindcss";
 
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F8F8F8;
+  --foreground: #1F1F1F;
 }
 
 @theme inline {
@@ -10,17 +14,87 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+  --color-Tertiary-50: #F8F8F8;
+  --color-Tertiary-100: #DFDFDF;
+  --color-Tertiary-200: #CBCBCB;
+  --color-Tertiary-400: #716E6D;
+  --color-Tertiary-700: #1B1716;
+  --color-primary-green-600: #1A271B;
+  --color-primary-grey-50: #E0E3E0;
+
+  --color-basic-dark: #1F1F1F;
+
+
+
+  --font-Manrope: "Manrope";
+  --font-Inter: "Inter";
+  --font-Mulish: "Mulish";
+
+
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Manrope", sans-serif;
+}
+
+
+
+/* FONTS */
+.headline-18-regular {
+  font-family: "Manrope";
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.headline-20-regular {
+  font-family: "Manrope";
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.headline-40-regular {
+  font-family: "Manrope";
+  font-size: 40px;
+  line-height: 56px;
+  font-weight: 400;
+}
+
+.subtitle-16-semibold {
+  font-family: "Manrope";
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.display-48-regular {
+  font-family: "Manrope";
+  font-size: 48px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.body-14-regular {
+  font-family: "Mulish";
+  font-size: 14px;
+  line-height: 100%;
+  font-weight: 400;
+}
+
+.body-16-medium {
+  font-family: "Mulish";
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 500;
+}
+
+.button-12-regular {
+  font-family: "Inter";
+  font-size: 12px;
+  line-height: 100%;
+  font-weight: 400;
 }
