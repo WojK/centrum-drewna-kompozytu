@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import ContactBar from "./ContactBar";
+// import ContactBar from "./ContactBar";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);

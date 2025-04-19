@@ -1,4 +1,3 @@
-import ContactBar from "@/components/homepage/ContactBar";
 import HeroContent from "@/components/homepage/HeroContent";
 import Navbar from "@/components/homepage/Navbar";
 import PricingInfo from "@/components/homepage/PricingInfo";
