@@ -3,9 +3,12 @@
 import clsx from "clsx";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-// import ContactBar from "./ContactBar";
 
-const Navbar = () => {
+type TNavbarProps = {
+  showedContactBar: boolean;
+};
+
+const Navbar = ({ showedContactBar }: TNavbarProps) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -21,13 +24,12 @@ const Navbar = () => {
     <nav
       className={clsx(
         "sticky top-0 z-20",
+        showedContactBar && scrolled && "top-[32px]",
         scrolled
           ? "bg-white text-basic-dark shadow-md py-4"
           : "bg-transparent text-white"
       )}
     >
-      {/* <ContactBar isLoggedIn={true} /> */}
-
       <div
         className={clsx(
           "flex px-10 items-center justify-between",
@@ -59,17 +61,36 @@ const Navbar = () => {
           </ul>
         </div>
         <div>
-          <div className="flex items-center border border-white px-2.5 bg-transparent text-white max-w-md w-[320px] py-3">
-            <Image
-              src="/svg/search.svg"
-              alt="search icon"
-              width={17}
-              height={17}
-            />
+          <div
+            className={clsx(
+              "flex items-center border  px-2.5 bg-transparent max-w-md w-[320px] py-3",
+              scrolled ? "border-basic-dark" : "border-white"
+            )}
+          >
+            {scrolled ? (
+              <Image
+                src="/svg/search_dark.svg"
+                alt="search icon"
+                width={17}
+                height={17}
+              />
+            ) : (
+              <Image
+                src="/svg/search.svg"
+                alt="search icon"
+                width={17}
+                height={17}
+              />
+            )}
             <input
               type="text"
               placeholder="Szukaj"
-              className="ml-2.5 bg-transparent outline-none text-white placeholder-white w-full"
+              className={clsx(
+                "ml-2.5 bg-transparent outline-none w-full",
+                scrolled
+                  ? "text-basic-dark placeholder-basic-dark"
+                  : "text-white placeholder-white"
+              )}
             />
           </div>
         </div>

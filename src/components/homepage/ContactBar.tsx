@@ -2,39 +2,17 @@
 
 import clsx from "clsx";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 type TContacBarProps = {
   isLoggedIn: boolean;
+  showBar: boolean;
 };
 
-const ContactBar = ({ isLoggedIn }: TContacBarProps) => {
-  const [showBar, setShowBar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      // Show on scroll up, hide on scroll down
-      if (currentScrollY < lastScrollY) {
-        setShowBar(true);
-      } else if (currentScrollY > lastScrollY) {
-        setShowBar(false);
-      }
-
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
-
+const ContactBar = ({ isLoggedIn, showBar }: TContacBarProps) => {
   return (
     <div
       className={clsx(
-        "w-full flex justify-between px-10 py-2 z-20 bg-Tertiary-700 text-Tertiary-100 text-[16px] transform transition-transform duration-300",
+        "sticky top-0 w-full flex justify-between px-10 py-2 z-30 bg-Tertiary-700 text-Tertiary-100 text-[16px] transform transition-transform duration-300",
         showBar ? "translate-y-0" : "-translate-y-full"
       )}
     >
