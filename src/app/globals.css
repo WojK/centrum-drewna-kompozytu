@@ -119,3 +119,10 @@ body {
   background-color: #1F1F1F !important;
 }
 
+
+.swiper-slide-next .swiper-slide-partner {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: white;
+}
+

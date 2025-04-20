@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -39,7 +39,7 @@ const RealizedProjects = () => {
 
   return (
     <div className="px-10 mt-20 w-fit mx-auto relative">
-      <h2 className="headline-40-regular mb-10">Zreazlizowane projekty</h2>
+      <h2 className="headline-40-regular mb-10">Zrealizowane projekty</h2>
       <div className="absolute top-1/2 -translate-y-1/2 left-3 z-10">
         <SwiperPrevBtn swiperRef={swiperRef} />
       </div>

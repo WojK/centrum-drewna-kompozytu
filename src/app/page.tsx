@@ -14,6 +14,7 @@ import Footer from "@/components/homepage/Footer";
 import ContactBar from "@/components/homepage/ContactBar";
 import { useShowBar } from "@/hooks/useShowBar";
 import RealizedProjects from "@/components/homepage/RealizedProjects";
+import OurPartners from "@/components/homepage/OurPartners";
 
 export default function Home() {
   const { showBar } = useShowBar();
@@ -33,6 +34,7 @@ export default function Home() {
         <Features />
         <RecommendedProducts products={homepage_recommended_products} />
         <RegisterPlanks />
+        <OurPartners />
         <RealizedProjects />
         <QuestionsSection />
         <Footer />
