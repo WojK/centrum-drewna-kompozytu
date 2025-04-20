@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { Swiper as SwiperType } from "swiper";
 import SwiperPrevBtn from "./SwiperPrevBtn";
 import SwiperNextBtn from "./SwiperNextBtn";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 
