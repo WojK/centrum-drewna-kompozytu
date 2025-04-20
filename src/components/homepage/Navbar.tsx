@@ -23,7 +23,7 @@ const Navbar = ({ showedContactBar }: TNavbarProps) => {
   return (
     <nav
       className={clsx(
-        "sticky top-0 z-20",
+        "sticky top-0 z-20 transition-all duration-300 ease-in-out",
         showedContactBar && scrolled && "top-[32px]",
         scrolled
           ? "bg-white text-basic-dark shadow-md py-4"

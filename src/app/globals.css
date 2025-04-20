@@ -92,9 +92,30 @@ body {
   font-weight: 500;
 }
 
+.body-16-light {
+  font-family: "Mulish";
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 300;
+}
+
 .button-12-regular {
   font-family: "Inter";
   font-size: 12px;
   line-height: 100%;
   font-weight: 400;
 }
+
+.swiper-pagination-bullet {
+  background-color: white !important;
+  opacity: 1 !important;
+  width: 16px !important;
+  height: 16px !important;
+  border: 1px solid #1F1F1F !important;
+  margin: 0 24px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #1F1F1F !important;
+}
+
