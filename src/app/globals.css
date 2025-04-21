@@ -22,6 +22,7 @@
   --color-Tertiary-400: #716E6D;
   --color-Tertiary-700: #1B1716;
   --color-primary-green-600: #1A271B;
+  --color-primary-grey-100: #B6BDB7;
   --color-primary-grey-50: #E0E3E0;
 
   --color-basic-dark: #1F1F1F;
@@ -118,7 +119,6 @@ body {
 .swiper-pagination-bullet-active {
   background-color: #1F1F1F !important;
 }
-
 
 .swiper-slide-next .swiper-slide-partner {
   border: 2px solid rgba(0, 0, 0, 0.1);
