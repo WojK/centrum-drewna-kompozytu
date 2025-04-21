@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import Image from "next/image";
 
 type TCardProps = {
   title: string;
@@ -11,9 +12,11 @@ const HoverCard = ({ title, text, imgPath, cn }: TCardProps) => {
   return (
     <div className={clsx(cn)}>
       <span className="mb-5 text-[32px]">{title}</span>
-      <div className="relative w-full max-w-[328px] h-[437px] overflow-hidden group">
+      <div className="relative w-[328px] h-[437px] overflow-hidden group">
         {/* Image */}
-        <img
+        <Image
+          fill
+          alt=""
           src={imgPath}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         />

@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { FormEventHandler, useState } from "react";
 import Form from "./Form";
 
 const QuestionsSection = () => {
   const [mode, setMode] = useState<"init" | "form" | "sent">("init");
 
-  const handleFormSubmit = (event: any) => {
+  const handleFormSubmit: FormEventHandler<HTMLFormElement> = (event) => {
+    console.log(event);
     setMode("sent");
   };
 
