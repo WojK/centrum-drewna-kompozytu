@@ -30,7 +30,7 @@ export default function Home() {
           <div className="absolute top-0 inset-0 w-full bg-black/80" />
           <HeroContent />
         </div>
-        <div className="h-[696px] w-full" />
+        <div className="h-[546px] md:h-[696px] w-full" />
         <HoverCards items={homepage_hover_cards} cn="mt-20" />
         <PricingInfo cn="mt-10 md:mt-20" />
         <Features />

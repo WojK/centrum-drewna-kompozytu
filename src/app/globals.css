@@ -168,3 +168,8 @@ body {
     background-color: white;
   }
 }
+
+.swiper-partner-pagination {
+    @apply block md:hidden;
+}
+

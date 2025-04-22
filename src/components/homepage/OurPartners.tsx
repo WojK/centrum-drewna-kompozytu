@@ -24,8 +24,8 @@ const parteners = [
     material: "/img/partners/ultrashield.jpeg",
   },
   {
-    logo: "/img/partners/bruggan_logo.jpeg",
-    material: "/img/partners/bruggan.jpeg",
+    logo: "/img/partners/advance_logo.png",
+    material: "/img/partners/advance.jpeg",
   },
   {
     logo: "/img/partners/legro_logo.png",
@@ -34,22 +34,6 @@ const parteners = [
   {
     logo: "/img/partners/bruggan_logo.jpeg",
     material: "/img/partners/bruggan.jpeg",
-  },
-  {
-    logo: "/img/partners/maximus_logo.png",
-    material: "/img/partners/maximus.jpeg",
-  },
-  {
-    logo: "/img/partners/ultrashield_logo.jpeg",
-    material: "/img/partners/ultrashield.jpeg",
-  },
-  {
-    logo: "/img/partners/bruggan_logo.jpeg",
-    material: "/img/partners/bruggan.jpeg",
-  },
-  {
-    logo: "/img/partners/legro_logo.png",
-    material: "/img/partners/legro.jpeg",
   },
 ];
 
@@ -90,7 +74,7 @@ const OurPartners = () => {
           }}
         >
           {parteners.map((partner, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className="swiper-partner">
               <div className="swiper-slide-partner transition-shadow duration-300 p-6 w-fit">
                 <div className="w-fit flex flex-col items-center">
                   <div className="w-[96px] h-[96px] relative rounded-full overflow-clip">
@@ -106,7 +90,7 @@ const OurPartners = () => {
                       src={partner.logo}
                       alt={partner.logo}
                       fill
-                      className="object-cover"
+                      className="object-contain"
                     />
                   </div>
                 </div>

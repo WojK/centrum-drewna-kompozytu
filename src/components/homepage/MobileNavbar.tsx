@@ -1,9 +1,21 @@
 import clsx from "clsx";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   const handleOpenMenu = () => {
     setIsOpen(true);
@@ -16,7 +28,7 @@ const MobileNavbar = () => {
   return (
     <nav
       className={clsx(
-        "w-full sticky top-0 z-50 flex flex-col md:hidden",
+        "w-full sticky top-0 z-50 md:hidden flex flex-col",
         isOpen && "h-screen"
       )}
     >
@@ -39,7 +51,7 @@ const MobileNavbar = () => {
         )}
       </div>
       {isOpen && (
-        <div className="p-6 flex flex-col h-full bg-white">
+        <div className="grow p-6 flex flex-col bg-white overflow-y-auto">
           <ul className="flex gap-y-6 flex-col headline-20-regular border-b border-Tertiary-200 pb-10">
             {[
               "Tarasy",
@@ -75,8 +87,7 @@ const MobileNavbar = () => {
           <span className="body-16-semibold text-Tertiary-300 mt-4 block">
             kid@kompozytidrewno.pl
           </span>
-          <div className="grow" />
-          <button className="w-full text-Tertiary-700 bg-white px-5 py-4 subtitle-16-semibold border border-primary-green-600">
+          <button className="mt-10 w-full text-Tertiary-700 bg-white px-5 py-4 subtitle-16-semibold border border-primary-green-600">
             Zarejestruj się
           </button>
           <button className="w-full text-white bg-primary-green-600 px-5 py-4 mt-4 subtitle-16-semibold">
