@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
 @import "tailwindcss";
-
 
 :root {
   --background: #F8F8F8;
@@ -12,99 +8,144 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 
 
   --color-Tertiary-50: #F8F8F8;
   --color-Tertiary-100: #DFDFDF;
   --color-Tertiary-200: #CBCBCB;
+  --color-Tertiary-300: #A39E9D;
   --color-Tertiary-400: #716E6D;
   --color-Tertiary-700: #1B1716;
   --color-primary-green-600: #1A271B;
   --color-primary-grey-100: #B6BDB7;
   --color-primary-grey-50: #E0E3E0;
-
   --color-basic-dark: #1F1F1F;
 
-
-
-  --font-Manrope: "Manrope";
-  --font-Inter: "Inter";
-  --font-Mulish: "Mulish";
-
-
+  --font-Manrope: var(--font-manrope);
+  --font-Mulish: var(--font-mulish);
+  --font-Inter: var(--font-inter);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-manrope), sans-serif;
 }
 
 
 
 /* FONTS */
-.headline-18-regular {
+@utility headline-18-regular {
   font-family: "Manrope";
   font-size: 18px;
   line-height: 30px;
   font-weight: 400;
 }
 
-.headline-20-regular {
+@utility headline-20-regular {
   font-family: "Manrope";
   font-size: 20px;
   line-height: 32px;
   font-weight: 400;
 }
 
-.headline-40-regular {
+@utility headline-20-light {
+  font-family: "Manrope";
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 300;
+}
+
+@utility headline-24-light {
+  font-family: "Manrope";
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 300;
+}
+
+@utility headline-40-regular {
   font-family: "Manrope";
   font-size: 40px;
   line-height: 56px;
   font-weight: 400;
 }
 
-.subtitle-16-semibold {
+@utility subtitle-16-semibold {
   font-family: "Manrope";
   font-size: 16px;
   font-weight: 600;
 }
 
-.display-48-regular {
+@utility display-88-regular {
   font-family: "Manrope";
-  font-size: 48px;
-  line-height: 32px;
+  font-size: 88px;
+  line-height: 116px;
   font-weight: 400;
 }
 
-.body-14-regular {
+@utility display-48-regular {
+  font-family: "Manrope";
+  font-size: 48px;
+  line-height: 100%;
+  font-weight: 400;
+}
+
+@utility display-40-regular {
+  font-family: "Manrope";
+  font-size: 40px;
+  line-height: 100%;
+  font-weight: 400;
+}
+
+@utility body-14-regular {
   font-family: "Mulish";
   font-size: 14px;
   line-height: 100%;
   font-weight: 400;
 }
 
-.body-16-medium {
+@utility body-16-medium {
   font-family: "Mulish";
   font-size: 16px;
   line-height: 100%;
   font-weight: 500;
 }
 
-.body-16-light {
+@utility body-16-semibold {
+  font-family: "Mulish";
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 600;
+}
+
+@utility body-16-light {
   font-family: "Mulish";
   font-size: 16px;
   line-height: 100%;
   font-weight: 300;
 }
 
-.button-12-regular {
+@utility button-12-regular {
   font-family: "Inter";
   font-size: 12px;
   line-height: 100%;
   font-weight: 400;
+}
+
+@utility overline-20-regular {
+  font-family: "Mulish";
+  font-size: 20px;
+  line-height: 100%;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+@utility overline-16-regular {
+  font-family: "Mulish";
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
 .swiper-pagination-bullet {
@@ -120,9 +161,10 @@ body {
   background-color: #1F1F1F !important;
 }
 
-.swiper-slide-next .swiper-slide-partner {
-  border: 2px solid rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  background-color: white;
+@media (min-width: 768px) {
+  .swiper-slide-next .swiper-slide-partner {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: white;
+  }
 }
-

@@ -12,7 +12,7 @@ const HoverCard = ({ title, text, imgPath, cn }: TCardProps) => {
   return (
     <div className={clsx(cn)}>
       <span className="mb-5 text-[32px]">{title}</span>
-      <div className="relative w-[328px] h-[437px] overflow-hidden group">
+      <div className="relative w-[328px] h-[437px] overflow-hidden group mt-5 md:mt-0">
         {/* Image */}
         <Image
           fill
@@ -26,6 +26,10 @@ const HoverCard = ({ title, text, imgPath, cn }: TCardProps) => {
           <p className="text-sm leading-relaxed">{text}</p>
         </div>
       </div>
+
+      <button className="md:hidden text-primary-green-600 border border-primary-green-600 subtitle-16-semibold py-3.5 bg-white w-full mt-6">
+        Zobacz więcej
+      </button>
     </div>
   );
 };

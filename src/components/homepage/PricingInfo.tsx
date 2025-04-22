@@ -8,22 +8,22 @@ const PricingInfo = ({ cn }: TPricingInfoProps) => {
   return (
     <div
       className={clsx(
-        "p-10 flex bg-white border border-primary-grey-50 mx-24 justify-between",
+        "mb-10 p-10 flex flex-col md:flex-row bg-white border border-primary-grey-50 mx-6 md:mx-24 justify-between",
         cn
       )}
     >
-      <div className="w-[536px]">
+      <div className="md:w-[536px]">
         <p className="text-[48px]">Wyceń Twój taras</p>
         <p className="mt-4">
           Skorzystaj z naszego konfiguratora, aby wycenić Twój taras.
         </p>
         <p> Konfigurator jest dostępny po zalogowaniu.</p>
-        <button className="text-white font-semibold bg-primary-green-600 px-4 py-3 mt-6">
+        <button className="hidden md:block text-white font-semibold bg-primary-green-600 px-4 py-3 mt-6">
           Wyceń i zamów
         </button>
       </div>
 
-      <div className="w-[536px]">
+      <div className="md:w-[536px] mt-10 md:mt-0">
         <p className="text-[24px]">Jak to działa?</p>
         <p className="mt-6">
           1. Kliknij przycisk
@@ -42,6 +42,10 @@ const PricingInfo = ({ cn }: TPricingInfoProps) => {
           <span className="font-semibold"> Skontaktuj się z nami, </span>
           aby złożyć zamówienie.
         </p>
+
+        <button className="md:hidden w-full text-white font-semibold bg-primary-green-600 px-4 py-3 mt-10">
+          Wyceń i zamów
+        </button>
       </div>
     </div>
   );

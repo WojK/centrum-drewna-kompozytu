@@ -12,7 +12,7 @@ const ContactBar = ({ isLoggedIn, showBar }: TContacBarProps) => {
   return (
     <div
       className={clsx(
-        "sticky top-0 w-full flex justify-between px-10 py-2 z-30 bg-Tertiary-700 text-Tertiary-100 text-[16px] transform transition-transform duration-300",
+        "hidden sticky top-0 w-full md:flex justify-between px-10 py-2 z-30 bg-Tertiary-700 text-Tertiary-100 text-[16px] transform transition-transform duration-300",
         showBar ? "translate-y-0" : "-translate-y-full"
       )}
     >

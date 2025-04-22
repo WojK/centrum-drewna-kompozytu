@@ -8,7 +8,7 @@ type TCardsProps = {
 
 const HoverCards = ({ items, cn }: TCardsProps) => {
   return (
-    <div className={clsx("flex justify-center gap-x-4 flex-wrap", cn)}>
+    <div className={clsx("flex justify-center gap-x-4 flex-wrap gap-y-10", cn)}>
       {items.map((i) => {
         return (
           <HoverCard

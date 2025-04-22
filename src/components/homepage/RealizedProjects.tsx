@@ -38,28 +38,36 @@ const RealizedProjects = () => {
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
-    <div className="px-10 mt-20 w-fit mx-auto relative">
+    <div className="px-6 md:px-10 mt-10 md:mt-20 w-fit mx-auto relative">
       <h2 className="headline-40-regular mb-10">Zrealizowane projekty</h2>
-      <div className="absolute top-1/2 -translate-y-1/2 left-3 z-10">
+      <div className="hidden md:block absolute top-1/2 -translate-y-1/2 left-3 z-10">
         <SwiperPrevBtn swiperRef={swiperRef} />
       </div>
-      <div className="absolute top-1/2 -translate-y-1/2 right-3 z-10">
+      <div className="hidden md:block absolute top-1/2 -translate-y-1/2 right-3 z-10">
         <SwiperNextBtn swiperRef={swiperRef} />{" "}
       </div>
 
       <Swiper
         onSwiper={(swiper: SwiperType) => (swiperRef.current = swiper)}
-        spaceBetween={40}
-        slidesPerView={2}
+        spaceBetween={20}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+        }}
         modules={[Pagination]}
         pagination={{ clickable: true }}
         loop
-        className="max-w-[1248px] !pb-16"
+        className="md:max-w-[1248px] max-w-[calc(100vw-48px)] !pb-16"
       >
         {products.map((product, index) => (
           <SwiperSlide key={index}>
             <div className="bg-white w-fit">
-              <div className="w-[604px] h-[604px] relative">
+              <div className="md:w-[604px] md:h-[604px] w-[calc(100vw-48px) h-[calc(100vw-48px)]  relative">
                 <Image
                   src={product.img}
                   alt={product.title}

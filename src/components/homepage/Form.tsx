@@ -6,7 +6,7 @@ type TFormProps = {
 
 const Form = ({ onSubmit }: TFormProps) => {
   return (
-    <form className="flex flex-col gap-y-6" onSubmit={onSubmit}>
+    <form className="flex flex-col gap-y-6 w-full" onSubmit={onSubmit}>
       <div className="flex flex-col">
         <label htmlFor="name" className="text-Tertiary-50 body-14-regular mb-1">
           Nazwa firmy lub imię i nazwisko

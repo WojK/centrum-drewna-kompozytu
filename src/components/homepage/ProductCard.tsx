@@ -17,7 +17,7 @@ const ProductCard = ({
   priceType,
 }: TProductCardProps) => {
   return (
-    <div className="flex flex-col p-6 w-[294px] bg-white h-[466px] relative transition-shadow duration-300 hover:shadow-[0px_0px_8px_8px_#28282826]">
+    <div className="mx-auto flex flex-col p-6 w-[294px] bg-white h-[466px] relative transition-shadow duration-300 hover:shadow-[0px_0px_8px_8px_#28282826]">
       <div className="relative h-[246px] w-[246px]">
         <div className="absolute top-0 left-0 z-10">
           <Chip text={type} />

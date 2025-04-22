@@ -2,15 +2,15 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="px-12 py-10">
+    <footer className="px-10 md:px-12 py-10">
       <div className="flex flex-col w-fit mx-auto">
-        <div className="flex justify-center">
+        <div className="flex flex-col md:flex-row justify-center">
           <div>
             <Image src="/img/logo.png" alt="logo" width={80} height={108} />
           </div>
-          <div className="ml-20 border-r border-Tertiary-200 pr-[135px]">
+          <div className="pb-6 md:pb-0 mt-6 md:mt-0 md:ml-20 border-b md:border-b-0 md:border-r border-Tertiary-200 pr-[135px]">
             <h2 className="headline-20-regular">Skontaktuj się z nami</h2>
-            <span className="text-Tertiary-400 block mt-6 button-12-regular">
+            <span className="text-Tertiary-400 block mt-4 md:mt-6 button-12-regular">
               Email
             </span>
             <span className="body-14-regular block mt-1">
@@ -35,7 +35,7 @@ const Footer = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-y-4 pl-[135px] border-r border-Tertiary-200 pr-[135px]">
+          <div className="pb-6 md:pb-0 pt-6 md:pt-0 flex flex-col gap-y-4 md:pl-[135px] border-b md:border-b-0 md:border-r border-Tertiary-200 md:pr-[135px]">
             {[
               "Oferta",
               "Wycena indywidualna",
@@ -51,7 +51,7 @@ const Footer = () => {
               );
             })}
           </div>
-          <div className="pl-[135px]">
+          <div className="md:pl-[135px] pt-6 md:pt-0">
             <h2 className="headline-20-regular">Subskrypuj newsletter</h2>
             <span className="mt-4 body-14-regular inline-block">
               Bądź na bieżąco z nowościami i promocjami.

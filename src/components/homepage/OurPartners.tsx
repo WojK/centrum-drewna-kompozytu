@@ -8,6 +8,7 @@ import SwiperNextBtn from "./SwiperNextBtn";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
+import { Pagination } from "swiper/modules";
 
 const parteners = [
   {
@@ -56,24 +57,33 @@ const OurPartners = () => {
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
-    <div className="mt-20 w-[1248px] mx-auto">
+    <div className="mt-12 md:mt-20 max-w-screen overflow-x-clip md:w-[1248px] mx-auto pl-6 md:pl-0">
       <h2 className="headline-40-regular mb-10">Nasi partnerzy</h2>
 
       <div className="relative">
-        <div className="absolute top-1/2 -translate-y-1/2 left-0 z-10">
+        <div className="absolute top-1/2 -translate-y-1/2 left-0 z-10 hidden md:block">
           <SwiperPrevBtn swiperRef={swiperRef} />
         </div>
-        <div className="absolute top-1/2 -translate-y-1/2 right-0 z-10">
+        <div className="absolute top-1/2 -translate-y-1/2 right-0 z-10 hidden md:block">
           <SwiperNextBtn swiperRef={swiperRef} />{" "}
         </div>
         <Swiper
           onSwiper={(swiper: SwiperType) => (swiperRef.current = swiper)}
-          spaceBetween={40}
-          slidesPerView={5}
+          spaceBetween={20}
+          slidesPerView={2}
           pagination={{ clickable: true }}
           loop
-          className="max-w-[1104px]"
-          modules={[Autoplay]}
+          breakpoints={{
+            0: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 5,
+              spaceBetween: 40,
+            },
+          }}
+          className="max-w-[1104px] !pb-16"
+          modules={[Autoplay, Pagination]}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,

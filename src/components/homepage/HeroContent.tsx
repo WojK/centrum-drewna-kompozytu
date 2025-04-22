@@ -1,18 +1,18 @@
 const HeroContent = () => {
   return (
-    <div className="text-white relative pl-[172px] pt-[172px]">
-      <p className="uppercase tracking-[2px] font-normal text-xl">
+    <div className="text-white relative px-6 py-24 md:pl-[172px] md:pt-[172px]">
+      <p className="uppercase overline-16-regular md:overline-20-regular">
         KOMPOZYT I DREWNO
       </p>
-      <p className="mt-2 font-normal text-[88px] leading-[116px]">
+      <p className="mt-2 display-48-regular md:display-88-regular">
         Subtelne dla oka,
-        <br /> silne w konstrukcji
+        <br className="hidden md:inline" /> silne w konstrukcji
       </p>
-      <p className="mt-10 font-light text-[24px] w-[480px]">
+      <p className="mt-10 headline-20-light md:headline-24-light  md:w-[480px]">
         Od 13 lat tworzymy rozwiązania, które łączą trwałość, estetykę i
         nowoczesne rozwiązania.
       </p>
-      <button className="text-Tertiary-700 bg-white px-5 py-4 mt-10">
+      <button className="text-Tertiary-700 bg-white px-5 py-4 mt-10 subtitle-16-semibold">
         Zarejestruj się
       </button>
     </div>
