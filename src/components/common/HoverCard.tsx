@@ -11,8 +11,8 @@ type TCardProps = {
 const HoverCard = ({ title, text, imgPath, cn }: TCardProps) => {
   return (
     <div className={clsx(cn)}>
-      <span className="mb-5 text-[32px]">{title}</span>
-      <div className="relative w-[328px] h-[437px] overflow-hidden group mt-5 md:mt-0">
+      <span className="mb-5 headline-32-regular">{title}</span>
+      <div className="relative w-[328px] h-[438px] overflow-hidden group mt-5 md:mt-0">
         {/* Image */}
         <Image
           fill
@@ -22,12 +22,12 @@ const HoverCard = ({ title, text, imgPath, cn }: TCardProps) => {
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-Tertiary-100/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex items-center justify-center text-gray-800">
+        <div className="absolute inset-0 bg-tertiary-100/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex items-center justify-center text-gray-800">
           <p className="text-sm leading-relaxed">{text}</p>
         </div>
       </div>
 
-      <button className="md:hidden text-primary-green-600 border border-primary-green-600 subtitle-16-semibold py-3.5 bg-white w-full mt-6">
+      <button className="cursor-pointer md:hidden text-primary-600 border border-primary-600 subtitle-16-semibold py-3.5 bg-white w-full mt-6">
         Zobacz więcej
       </button>
     </div>

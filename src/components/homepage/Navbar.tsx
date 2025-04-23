@@ -28,7 +28,7 @@ const Navbar = ({ showedContactBar }: TNavbarProps) => {
     <nav
       className={clsx(
         "hidden md:block sticky top-0 z-20 transition-all duration-300 ease-in-out",
-        showedContactBar && scrolled && "top-[32px]",
+        showedContactBar && scrolled && "top-8",
         scrolled
           ? "bg-white text-basic-dark shadow-md py-4"
           : "bg-transparent text-white"
@@ -42,12 +42,12 @@ const Navbar = ({ showedContactBar }: TNavbarProps) => {
       >
         <div className="flex items-center">
           {!scrolled ? (
-            <Image src="/img/logo.png" alt="logo" width={80} height={108} />
+            <Image src="/img/logo.webp" alt="logo" width={80} height={108} />
           ) : (
-            <Image src="/img/logo.png" alt="logo" width={48} height={64} />
+            <Image src="/img/logo.webp" alt="logo" width={48} height={64} />
           )}
 
-          <ul className="flex gap-x-12 ml-12 text-[18px] leading-[32px] font-normal">
+          <ul className="flex gap-x-12 ml-12 body-18-regular">
             {[
               "Tarasy",
               "Elewacje",
@@ -67,7 +67,7 @@ const Navbar = ({ showedContactBar }: TNavbarProps) => {
         <div>
           <div
             className={clsx(
-              "flex items-center border  px-2.5 bg-transparent max-w-md w-[320px] py-3",
+              "flex items-center border px-2.5 bg-transparent max-w-md w-[320px] py-3",
               scrolled ? "border-basic-dark" : "border-white"
             )}
           >
@@ -90,7 +90,7 @@ const Navbar = ({ showedContactBar }: TNavbarProps) => {
               type="text"
               placeholder="Szukaj"
               className={clsx(
-                "ml-2.5 bg-transparent outline-none w-full",
+                "ml-2.5 bg-transparent outline-none w-full subtitle-16-semibold",
                 scrolled
                   ? "text-basic-dark placeholder-basic-dark"
                   : "text-white placeholder-white"

@@ -1,6 +1,6 @@
 const HeroContent = () => {
   return (
-    <div className="text-white relative px-6 py-24 md:pl-[172px] md:pt-[172px]">
+    <div className="text-white relative px-6 py-24 mx-auto md:pt-[172px] max-w-7xl">
       <p className="uppercase overline-16-regular md:overline-20-regular">
         KOMPOZYT I DREWNO
       </p>
@@ -12,7 +12,7 @@ const HeroContent = () => {
         Od 13 lat tworzymy rozwiązania, które łączą trwałość, estetykę i
         nowoczesne rozwiązania.
       </p>
-      <button className="text-Tertiary-700 bg-white px-5 py-4 mt-10 subtitle-16-semibold">
+      <button className="cursor-pointer text-tertiary-700 bg-white px-5 py-4 mt-10 subtitle-16-semibold">
         Zarejestruj się
       </button>
     </div>

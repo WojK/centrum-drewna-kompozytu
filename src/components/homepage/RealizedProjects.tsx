@@ -13,22 +13,22 @@ import { useRef } from "react";
 
 const products = [
   {
-    img: "/img/realized_projects/1.png",
+    img: "/img/realized_projects/1.webp",
     title: "Deska kompozytowa na taras Ultrashield Naturale UH02",
     color: "Kolor Antique",
   },
   {
-    img: "/img/realized_projects/2.png",
+    img: "/img/realized_projects/2.webp",
     title: "Lamele zewnętrzne Ultrashield UH46",
     color: "Kolor Oak",
   },
   {
-    img: "/img/realized_projects/1.png",
+    img: "/img/realized_projects/1.webp",
     title: "Deska kompozytowa na taras Ultrashield Naturale UH02",
     color: "Kolor Antique",
   },
   {
-    img: "/img/realized_projects/2.png",
+    img: "/img/realized_projects/2.webp",
     title: "Lamele zewnętrzne Ultrashield UH46",
     color: "Kolor Oak",
   },
@@ -44,7 +44,7 @@ const RealizedProjects = () => {
         <SwiperPrevBtn swiperRef={swiperRef} />
       </div>
       <div className="hidden md:block absolute top-1/2 -translate-y-1/2 right-3 z-10">
-        <SwiperNextBtn swiperRef={swiperRef} />{" "}
+        <SwiperNextBtn swiperRef={swiperRef} />
       </div>
 
       <Swiper
@@ -62,12 +62,12 @@ const RealizedProjects = () => {
         modules={[Pagination]}
         pagination={{ clickable: true }}
         loop
-        className="md:max-w-[1248px] max-w-[calc(100vw-48px)] !pb-16"
+        className="max-w-[calc(100vw-48px)] md:max-w-[1248px] !pb-16"
       >
         {products.map((product, index) => (
           <SwiperSlide key={index}>
             <div className="bg-white w-fit">
-              <div className="md:w-[604px] md:h-[604px] w-[calc(100vw-48px) h-[calc(100vw-48px)]  relative">
+              <div className="w-[calc(100vw-48px) h-[calc(100vw-48px)] md:w-[604px] md:h-[604px] relative">
                 <Image
                   src={product.img}
                   alt={product.title}

@@ -4,7 +4,7 @@ type TChipProps = {
 
 const Chip = ({ text }: TChipProps) => {
   return (
-    <span className="font-medium text-[12px] font-Inter border border-primary-green-600 py-2 px-4 w-fit rounded-[46px]">
+    <span className="button-12-medium border border-primary-600 py-2 px-4 w-fit rounded-[46px]">
       {text}
     </span>
   );

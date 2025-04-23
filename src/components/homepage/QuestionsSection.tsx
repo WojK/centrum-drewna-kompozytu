@@ -14,7 +14,7 @@ const QuestionsSection = () => {
   };
 
   return (
-    <div className="px-6 md:px-0 py-12 md:py-20 justify-center flex flex-col md:flex-row bg-primary-green-600 text-white mt-12 md:mt-20">
+    <div className="px-6 md:px-0 py-12 md:py-20 justify-center flex flex-col md:flex-row bg-primary-600 text-white mt-12 md:mt-20">
       <div className="md:border-r border-white md:pr-24 md:w-[528px]">
         {(mode === "init" || mode === "form") && (
           <>
@@ -28,7 +28,7 @@ const QuestionsSection = () => {
           {mode !== "sent" && (
             <div className="flex flex-col md:flex-row gap-x-6">
               <div>
-                <span className="text-Tertiary-200 body-14-regular block mt-6">
+                <span className="text-tertiary-200 body-14-regular block mt-6">
                   Email
                 </span>
                 <span className="body-16-medium block mt-1">
@@ -36,7 +36,7 @@ const QuestionsSection = () => {
                 </span>
               </div>
               <div>
-                <span className="text-Tertiary-200 body-14-regular block mt-6">
+                <span className="text-tertiary-200 body-14-regular block mt-6">
                   Telefon
                 </span>
                 <span className="body-16-medium block mt-1">
@@ -47,7 +47,7 @@ const QuestionsSection = () => {
           )}
           {mode === "init" && (
             <button
-              className="text-primary-green-600 subtitle-16-semibold px-5 py-[17px] bg-white mt-10 mb-12 md:mb-0"
+              className="cursor-pointer text-primary-600 subtitle-16-semibold px-5 py-[17px] bg-white mt-10 mb-12 md:mb-0"
               onClick={handleWriteToUsClick}
             >
               Napisz do nas
@@ -79,7 +79,7 @@ const QuestionsSection = () => {
           <br className="hidden md:inline" />
           wiadomości w miesiącu.
         </p>
-        <button className="w-full md:w-fit text-primary-green-600 subtitle-16-semibold px-5 py-[17px] bg-white mt-10">
+        <button className="cursor-pointer w-full md:w-fit text-primary-600 subtitle-16-semibold px-5 py-[17px] bg-white mt-10">
           Subskrybuj newsletter
         </button>
       </div>

@@ -32,7 +32,7 @@ const ProductCard = ({
         {price} {priceType}
       </span>
 
-      <button className="absolute bottom-4 text-primary-green-600 py-4 font-semibold border border-primary-green-600 left-1/2 -translate-x-1/2 w-[246px]">
+      <button className="cursor-pointer absolute bottom-4 text-primary-600 py-4 font-semibold border border-primary-600 left-1/2 -translate-x-1/2 w-[246px]">
         Zobacz szczegóły
       </button>
     </div>

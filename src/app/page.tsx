@@ -26,7 +26,7 @@ export default function Home() {
       <MobileNavbar />
       <div className="relative">
         <Navbar showedContactBar={showBar} />
-        <div className="h-auto max-h-[796px] w-full bg-cover bg-[url('/img/hero.jpeg')] absolute top-0">
+        <div className="h-auto w-full bg-cover bg-[url('/img/hero.webp')] absolute top-0">
           <div className="absolute top-0 inset-0 w-full bg-black/80" />
           <HeroContent />
         </div>

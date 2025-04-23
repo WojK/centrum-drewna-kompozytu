@@ -16,8 +16,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Centrum drwewna i kompozytu",
-  description: "Centrum drwewna i kompozytu",
+  title: "Centrum drewna i kompozytu",
+  description: "Centrum drewna i kompozytu",
 };
 
 export default function RootLayout({

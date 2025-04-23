@@ -12,28 +12,28 @@ import { Pagination } from "swiper/modules";
 
 const parteners = [
   {
-    logo: "/img/partners/bruggan_logo.jpeg",
-    material: "/img/partners/bruggan.jpeg",
+    logo: "/img/partners/bruggan_logo.webp",
+    material: "/img/partners/bruggan.webp",
   },
   {
-    logo: "/img/partners/maximus_logo.png",
-    material: "/img/partners/maximus.jpeg",
+    logo: "/img/partners/maximus_logo.webp",
+    material: "/img/partners/maximus.webp",
   },
   {
-    logo: "/img/partners/ultrashield_logo.jpeg",
-    material: "/img/partners/ultrashield.jpeg",
+    logo: "/img/partners/ultrashield_logo.webp",
+    material: "/img/partners/ultrashield.webp",
   },
   {
-    logo: "/img/partners/advance_logo.png",
-    material: "/img/partners/advance.jpeg",
+    logo: "/img/partners/advance_logo.webp",
+    material: "/img/partners/advance.webp",
   },
   {
-    logo: "/img/partners/legro_logo.png",
-    material: "/img/partners/legro.jpeg",
+    logo: "/img/partners/legro_logo.webp",
+    material: "/img/partners/legro.webp",
   },
   {
-    logo: "/img/partners/bruggan_logo.jpeg",
-    material: "/img/partners/bruggan.jpeg",
+    logo: "/img/partners/bruggan_logo.webp",
+    material: "/img/partners/bruggan.webp",
   },
 ];
 
@@ -41,15 +41,14 @@ const OurPartners = () => {
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
-    <div className="mt-12 md:mt-20 max-w-screen overflow-x-clip md:w-[1248px] mx-auto pl-6 md:pl-0">
+    <div className="mt-12 md:mt-20 max-w-screen overflow-x-clip md:max-w-7xl mx-auto pl-6 md:pl-0">
       <h2 className="headline-40-regular mb-10">Nasi partnerzy</h2>
-
       <div className="relative">
         <div className="absolute top-1/2 -translate-y-1/2 left-0 z-10 hidden md:block">
           <SwiperPrevBtn swiperRef={swiperRef} />
         </div>
         <div className="absolute top-1/2 -translate-y-1/2 right-0 z-10 hidden md:block">
-          <SwiperNextBtn swiperRef={swiperRef} />{" "}
+          <SwiperNextBtn swiperRef={swiperRef} />
         </div>
         <Swiper
           onSwiper={(swiper: SwiperType) => (swiperRef.current = swiper)}
@@ -66,7 +65,7 @@ const OurPartners = () => {
               spaceBetween: 40,
             },
           }}
-          className="max-w-[1104px] !pb-16"
+          className="max-w-[1104px] !pb-16 !pt-1"
           modules={[Autoplay, Pagination]}
           autoplay={{
             delay: 3000,
