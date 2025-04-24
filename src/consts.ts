@@ -1,6 +1,5 @@
-export const INSTAGRAM_LINK = "https://www.instagram.com/kompozyt_i_drewno/";
-export const FACEBOOK_LINK =
-  "https://www.facebook.com/people/Kompozyt-i-Drewno/61556751760823/";
+export const INSTAGRAM_LINK = process.env.NEXT_PUBLIC_INSTAGRAM ?? "#";
+export const FACEBOOK_LINK = process.env.NEXT_PUBLIC_FACEBOOK ?? "#";
 
-export const EMAIL = "kontakt@kompozytidrewno.pl";
-export const PHONE = "+48 735 745 742";
+export const EMAIL = process.env.NEXT_PUBLIC_EMAIL ?? "#";
+export const PHONE = process.env.NEXT_PUBLIC_PHONE ?? "#";

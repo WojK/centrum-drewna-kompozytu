@@ -28,12 +28,7 @@ const MobileNavbar = () => {
   };
 
   return (
-    <nav
-      className={clsx(
-        "w-full sticky top-0 z-50 md:hidden flex flex-col",
-        isOpen && "h-screen"
-      )}
-    >
+    <nav className={clsx("md:hidden fixed top-0 w-full z-50 flex flex-col")}>
       <div className="bg-white border border-tertiary-100 pl-6 pr-7 py-2 flex justify-between items-center">
         <Image src="/img/logo.webp" alt="logo" width={40} height={53} />
         {!isOpen && (
@@ -53,7 +48,7 @@ const MobileNavbar = () => {
         )}
       </div>
       {isOpen && (
-        <div className="grow min-h-fit px-6 pt-6 flex flex-col bg-white overflow-y-auto pb-[100px]">
+        <div className="max-h-[calc(100vh-74px)] overflow-auto grow px-6 pt-6 flex flex-col bg-white pb-24">
           <ul className="flex gap-y-6 flex-col headline-20-regular border-b border-tertiary-200 pb-10">
             {[
               "Tarasy",

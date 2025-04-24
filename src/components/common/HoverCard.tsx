@@ -11,8 +11,8 @@ type TCardProps = {
 const HoverCard = ({ title, text, imgPath, cn }: TCardProps) => {
   return (
     <div className={clsx(cn)}>
-      <span className="mb-5 headline-32-regular">{title}</span>
-      <div className="relative w-[328px] h-[438px] overflow-hidden group mt-5 md:mt-0">
+      <span className="headline-32-regular">{title}</span>
+      <div className="relative w-[328px] h-[438px] overflow-hidden group mt-5">
         {/* Image */}
         <Image
           fill

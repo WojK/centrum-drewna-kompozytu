@@ -27,11 +27,6 @@ const products = [
     title: "Deska kompozytowa na taras Ultrashield Naturale UH02",
     color: "Kolor Antique",
   },
-  {
-    img: "/img/realized_projects/2.webp",
-    title: "Lamele zewnętrzne Ultrashield UH46",
-    color: "Kolor Oak",
-  },
 ];
 
 const RealizedProjects = () => {
@@ -53,9 +48,11 @@ const RealizedProjects = () => {
         breakpoints={{
           0: {
             slidesPerView: 1,
+            slidesPerGroup: 1,
           },
           768: {
             slidesPerView: 2,
+            slidesPerGroup: 2,
             spaceBetween: 40,
           },
         }}

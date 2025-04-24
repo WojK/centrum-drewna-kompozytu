@@ -3,6 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
+  const startYear = 2025;
+  const currentYear = new Date().getFullYear();
+  const displayYear =
+    currentYear === startYear ? `${startYear}` : `${startYear}-${currentYear}`;
+
   return (
     <footer className="px-10 md:px-12 py-10">
       <div className="flex flex-col w-fit mx-auto max-w-7xl">
@@ -10,7 +15,7 @@ const Footer = () => {
           <div>
             <Image src="/img/logo.webp" alt="logo" width={80} height={108} />
           </div>
-          <div className="pb-6 md:pb-0 mt-6 md:mt-0 md:ml-20 border-b md:border-b-0 md:border-r border-tertiary-200 pr-32">
+          <div className="pb-6 md:pb-0 mt-6 md:mt-0 md:ml-20 border-b md:border-b-0 md:border-r border-tertiary-200 md:pr-32">
             <h2 className="headline-20-regular">Skontaktuj się z nami</h2>
             <span className="text-tertiary-400 block mt-4 md:mt-6 button-12-regular">
               Email
@@ -80,7 +85,7 @@ const Footer = () => {
           </div>
         </div>
         <span className="text-tertiary-400 body-14-regular mt-10">
-          Copyright@ 2025 Kompozyt i Drewno wsparcie adito.pl
+          Copyright@ {displayYear} Kompozyt i Drewno
         </span>
       </div>
     </footer>

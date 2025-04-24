@@ -5,7 +5,6 @@ import { useRef } from "react";
 import { Swiper as SwiperType } from "swiper";
 import SwiperPrevBtn from "./SwiperPrevBtn";
 import SwiperNextBtn from "./SwiperNextBtn";
-import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import { Pagination } from "swiper/modules";
@@ -54,19 +53,22 @@ const OurPartners = () => {
           onSwiper={(swiper: SwiperType) => (swiperRef.current = swiper)}
           spaceBetween={20}
           slidesPerView={2}
+          slidesPerGroup={2}
           pagination={{ clickable: true }}
           loop
           breakpoints={{
             0: {
               slidesPerView: 2,
+              slidesPerGroup: 2,
             },
             768: {
               slidesPerView: 5,
+              slidesPerGroup: 5,
               spaceBetween: 40,
             },
           }}
           className="max-w-[1104px] !pb-16 !pt-1"
-          modules={[Autoplay, Pagination]}
+          modules={[Pagination]}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
@@ -84,12 +86,13 @@ const OurPartners = () => {
                       className="object-cover"
                     />
                   </div>
-                  <div className="w-[140px] h-[56px] relative mt-4">
+                  <div className="w-[140px] mt-4">
                     <Image
                       src={partner.logo}
-                      alt={partner.logo}
-                      fill
-                      className="object-contain"
+                      alt={"partner logo"}
+                      width={140}
+                      height={0}
+                      className="w-full h-auto"
                     />
                   </div>
                 </div>

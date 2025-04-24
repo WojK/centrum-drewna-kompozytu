@@ -31,11 +31,11 @@ const PricingInfo = ({ cn }: TPricingInfoProps) => {
           <span className="font-semibold"> “Wyceń i zamów”.</span>
         </p>
         <p className="mt-4">
-          <span className="font-semibold">2. Zarejestruj się lub zaloguj </span>
+          2. <span className="font-semibold">Zarejestruj się lub zaloguj </span>
           na swoje konto.
         </p>
         <p className="mt-4">
-          <span className="font-semibold">3. Podaj wymiary </span>
+          3.<span className="font-semibold"> Podaj wymiary </span>
           tarasu i wybierz <span className="font-semibold">rodzaj deski.</span>
         </p>
         <p className="mt-4">
